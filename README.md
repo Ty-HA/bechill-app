@@ -1,53 +1,67 @@
-# Solana Mobile dApp Scaffold
+# 🧘 BeChill
 
-A ready-to-go template Solana React Native dApp with dependencies installed and basic React UI components.
-It provides an interface to connect to locally installed wallet apps (that are MWA-compatible), view your account balance on devnet, and request an airdrop of SOL.
+**BeChill** is your AI-powered crypto coach, designed to help you stay focused, balanced, and grow both wealth and well-being.
 
-This React Native dApp is only fully functional on Android.
+> Think of it as Headspace meets Web3 🧠💸
 
-## Featured Libarires
-- [Mobile Wallet Adapter](https://github.com/solana-mobile/mobile-wallet-adapter/tree/main/js/packages/mobile-wallet-adapter-protocol) for connecting to wallets and signing transactions/messages
-- [web3.js](https://solana-labs.github.io/solana-web3.js/) for constructing transactions and an RPC `connection` client.
+---
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/solana-mobile/solana-mobile-dapp-scaffold/assets/18451967/3d83d3dc-ab65-4a2c-881d-8a229f34e392" alt="Scaffold dApp Screenshot 1" width=300 />
-    </td>
-    <td align="center">
-      <img src="https://github.com/solana-mobile/solana-mobile-dapp-scaffold/assets/18451967/2fd69bd4-834d-45e1-8c7a-f80b5b576c96" alt="Scaffold dApp Screenshot 3" width=300 />
-    </td>
-    <td align="center">
-      <img src="https://github.com/solana-mobile/solana-mobile-dapp-scaffold/assets/18451967/cdd93c12-d9ff-4739-81af-92da5b90303a" alt="Scaffold dApp Screenshot 2" width=300 />
-    </td>
-  </tr>
-</table>
+## 🚀 Features
 
-## Prerequisites
+- 🧠 Personal AI guidance based on your investor profile and personality
+- 🔐 Connect wallet easily via Phantom, Solflare, or Fake Wallet
+- 💬 Sign transactions & messages
+- 💎 Request airdrops (Devnet)
+- 🌱 Set goals and track your emotional + financial growth
 
-If you haven't setup a React Native development environment for Android, you'll need to do that first. Follow the [Prerequisite Setup Guide](https://docs.solanamobile.com/getting-started/development-setup).
+---
 
-Follow the guide to make sure you:
-- setup your Android and React Native development environment.
-- have an Android device or emulator.
-- install an MWA compliant wallet app on your device/emulator.
-   
-## Usage
-1. Initialize project template
+## 📱 Mobile Stack
+
+- React Native + TypeScript
+- [Solana Mobile Stack](https://docs.solanamobile.com/)
+- Solana Wallet Adapter (Phantom, Solflare & Fake Wallet)
+- AI Coach ✨ (Coming soon)
+
+> 🧪 **Built with the official scaffold**:  
+> [solana-mobile-dapp-scaffold](https://github.com/solana-mobile/solana-mobile-dapp-scaffold)
+
+---
+
+## 🧪 Testing the App
+
+You can test **BeChill** in two ways:
+
+### 1. ✅ On a physical Android device
+Use your real Solana wallet (e.g. **Phantom** or **Solflare**) when prompted.
+
+### 2. 🧪 On an Android emulator
+Use the **Fake Wallet** to simulate wallet behavior without requiring a real seed phrase.
+
+> 💡 The app automatically detects your environment and adapts accordingly.
+
+To support Fake Wallet / Fake DApp testing, clone this helper repo:
+
+```bash
+git clone https://github.com/solana-mobile/mobile-wallet-adapter.git
 ```
-npx react-native init MySolanaDapp --template https://github.com/solana-mobile/solana-mobile-dapp-scaffold.git
+
+🔧 Run locally
+```bash
+Copy
+Modify
+git clone https://github.com/Ty-HA/bechill-app.git
+cd bechill-app
+npm install
+npx react-native run-android
 ```
-2. Install dependencies
-- `yarn install` or `npm install`
-3. Launch the app on your Android device/emulator
-- `npx react-native run-android`
+✅ You can also use Android Studio to run the emulator and debug easily.
 
-## Troubleshooting
-  
-- `TypeError: cli.init is not a function`: This during template initialization means you have an old version of React Native CLI.
-This template only works with the new CLI. You can uninstall and reinstall it as directed [here](https://stackoverflow.com/questions/72768245/typeerror-cli-init-is-not-a-function-for-react-native).
+💭 Coming soon
+AI onboarding
 
-- `Looks like your iOS environment is not properly set`: You can ignore this during template initialization and build the Android app as normal. This template is only compatible with Android.
+Mood & goal tracking
 
+Personalized wallet insights
 
-
+iOS support (Solana Mobile only)
