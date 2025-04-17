@@ -1,7 +1,13 @@
 // 📁 screens/MainScreen.tsx
 
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../navigation/types';
@@ -20,49 +26,60 @@ const MainScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Image
-        source={require('../assets/bechill-logo.png')}
-        style={{width: 100, height: 100, borderRadius: 50, marginBottom: 20}}
-      />
+    <ImageBackground
+      source={require('../assets/img/capy2.jpeg')}
+      resizeMode="cover"
+      style={styles.background}>
+      <View style={styles.overlay}>
+        {/*
+        <Image
+          source={require('../assets/bechill-logo.png')}
+          style={styles.logo}
+        />
+        */}
 
-      <Text style={styles.title}>Welcome to CHILL 😎</Text>
-      <Text style={styles.subtitle}>Your personal AI crypto coach.</Text>
-      <Text style={styles.description}>
-        Set your goals, connect your wallet, and start growing — both wealth &
-        well-being.
-      </Text>
-
-      <ConnectButton title="Connect wallet" />
-
-      {selectedAccount && (
-        <Text style={styles.walletAddress}>
-          ✅ Connected: {selectedAccount.address}
+        <Text style={styles.title}>Welcome to BE CHILL 😎</Text>
+        <Text style={styles.subtitle}>Your personal AI crypto coach.</Text>
+        <Text style={styles.description}>
+          Set your goals, connect your wallet, and start growing — both wealth &
+          well-being.
         </Text>
-      )}
 
-      <TouchableOpacity style={styles.button} onPress={handleStart}>
-        <Text style={styles.buttonText}>Start My CHILL Journey</Text>
-      </TouchableOpacity>
-    </View>
+        <ConnectButton title="Connect wallet" />
+
+        {selectedAccount && (
+          <Text style={styles.walletAddress}>
+            ✅ Connected: {selectedAccount.address}
+          </Text>
+        )}
+
+        <TouchableOpacity style={styles.button} onPress={handleStart}>
+          <Text style={styles.buttonText}>Start My CHILL Journey</Text>
+        </TouchableOpacity>
+      </View>
+    </ImageBackground>
   );
 };
 
 export default MainScreen;
 
 const styles = StyleSheet.create({
-  container: {
+  background: {
     flex: 1,
-    backgroundColor: '#c8e8ed',
+    justifyContent: 'center',
+  },
+  overlay: {
+    flex: 1,
+    backgroundColor: 'rgba(255, 255, 255, 0.4)',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 24,
   },
   logo: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
     marginBottom: 20,
-    borderRadius: 60,
   },
   title: {
     fontSize: 28,

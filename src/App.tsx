@@ -14,7 +14,6 @@ import {AuthorizationProvider} from './components/providers/AuthorizationProvide
 import {clusterApiUrl} from '@solana/web3.js';
 
 import MainScreen from './screens/MainScreen';
-// import ConnectScreen from '../screens/ConnectScreen'; // même si tu l’as pas encore, on prépare
 
 const Stack = createStackNavigator<RootStackParamList>();
 
